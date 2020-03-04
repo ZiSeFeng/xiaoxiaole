@@ -3,15 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>消灭星星-POPSTAR！</title>
     <script>
     (function() {
         //响应式代码---------------------------------------------------------------------------------
         var dpr = window.devicePixelRatio
         var meta = document.querySelector('meta[name="viewport"]')
-        meta.setAttribute('content', `initial-scale=${1/dpr},maximum-scale=${1/dpr},user-scalable=0`)
-        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+        meta.setAttribute('content', `initial-scale=${1/dpr},maximum-scale=${1/dpr},user-scalable=0`);
+        var clientWidth = document.documentElement.clientWidth;
+        if (window.innerWidth > 768 && dpr === 1) clientWidth = 728;
+        document.documentElement.style.fontSize = clientWidth / 7.5 + 'px';
     })()
     </script>
     <link rel="stylesheet" href="./index.css">
