@@ -1,0 +1,323 @@
+@keyframes shrink {
+    from {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+html {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
+.nav-page {
+    width: 7.5rem;
+    height: 100%;
+    background-image: url(./imgsrc/navbg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.nav-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 6rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-menu img {
+    width: 3rem;
+    height: 0.8rem;
+}
+
+.record {
+    width: 6rem;
+    height: 1rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.record>span {
+    width: 2.5rem;
+    height: 0.8rem;
+    font-size: 0.3rem;
+    line-height: 0.8rem;
+    font-weight: bold;
+    background: url(./imgsrc/textbg.png) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    color: black;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.game-page {
+    width: 7.5rem;
+    height: 100%;
+    background: url(./imgsrc/gamebg.jpg) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.game-data {
+    font-size: 0.4rem;
+    font-weight: bold;
+    color: yellow;
+    width: 80%;
+    margin: 0 auto;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.level {
+    display: inline-block;
+    height: 100%;
+    width: 48%;
+}
+
+.need {
+    display: inline-block;
+    height: 100%;
+    width: 48%;
+}
+
+.score-data {
+
+    font-weight: bold;
+    text-align: center;
+}
+
+.score-data div {
+    height: 0.5rem;
+    line-height: 0.5rem;
+}
+
+.score-add {
+    color: white;
+    font-size: 0.3rem;
+    opacity: 0
+}
+
+.clear-show {
+    opacity: 1;
+    transition: opacity 0.3s linear
+}
+
+.extra-score {
+    color: white;
+    font-size: 0.3rem;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.score,
+.remain,
+.add-score,
+.clear-amount,
+.bonus-mark {
+    color: yellow;
+    font-size: 0.4rem;
+}
+
+.stars {
+    margin-top: 0.2rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    position: relative;
+    font-size: 0;
+}
+
+.stars span {
+    position: absolute;
+    background-color: silver;
+    border-radius: 25%;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    transition: bottom 0.2s linear, left 0.2s linear;
+}
+
+.level-done span {
+    transition: left 2s linear
+}
+
+.selected {
+    animation-name: shrink;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+}
+
+.green {
+    background-image: url(./imgsrc/green.jpg);
+}
+
+.red {
+    background-image: url(./imgsrc/red.jpg);
+}
+
+.yellow {
+    background-image: url(./imgsrc/yellow.jpg);
+}
+
+.purple {
+    background-image: url(./imgsrc/purple.jpg);
+}
+
+.blue {
+    background-image: url(./imgsrc/blue.jpg);
+}
+
+.game-page .success-show,
+.game-page .good-show,
+.game-page .better-show,
+.game-page .best-show {
+    width: 4rem;
+    height: 3rem;
+    transition: all 0.2s linear;
+}
+
+.success,
+.good,
+.better,
+.best {
+    background-size: 100% 100%;
+    z-index: 100;
+    position: fixed;
+    left: 30%;
+    top: 25%;
+    width: 0;
+    height: 0;
+}
+
+.success {
+    background: url(./imgsrc/success.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.good {
+    background: url(./imgsrc/good.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.better {
+    background: url(./imgsrc/better.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.best {
+    background: url(./imgsrc/best.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.gameover {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(230, 230, 230, 0.2);
+}
+
+.game-page .gameover-show {
+    display: block;
+}
+
+.gameover .wrapper {
+    position: absolute;
+    width: 6rem;
+    height: 8rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    background: url(./imgsrc/gameover.jpg) no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15%
+}
+
+.wrapper h1 {
+    background: url(./imgsrc/title.png) no-repeat;
+    background-size: 100% 100%;
+    width: 3rem;
+    height: 2rem;
+    line-height: 1.5rem;
+    font-size: 0.5rem;
+    color: darkred;
+}
+
+.wrapper img {
+    width: 3rem;
+    height: 1rem;
+}
+
+.score-detail {
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.score-detail span {
+    font-size: 0.3rem;
+    font-style: italic;
+}
+
+.score-detail div {
+    width: 3rem;
+    height: 0.4rem;
+    background: url(./imgsrc/detialbg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.back-logo,
+.reflesh {
+    position: fixed;
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 0;
+}
+
+.back-logo {
+    right: 0;
+}
+
+.reflesh {
+    left: 0;
+}
